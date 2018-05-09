@@ -1,0 +1,148 @@
+html, body, div, h2 {
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow: hidden;
+}
+.container{
+	width: 100%;
+}
+/* header styles */
+header {
+	background: #bd8eed; /* Old browsers */
+	background: -moz-linear-gradient(top, #bd8eed 0%, #b9a6db 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #bd8eed 0%,#b9a6db 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #bd8eed 0%,#b9a6db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd8eed', endColorstr='#b9a6db',GradientType=0 ); /* IE6-9 */
+	text-align: center;
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	transform: translateY(-100%);
+	transition: ease all .5s;
+}
+header.active {
+	transform: translateY(0);
+}
+header h1 {
+	font-family: 'Raleway', sans-serif;
+}
+
+/* general grid settings */
+.grid {
+	overflow: hidden;
+}
+.grid-item{
+	width: 50%;
+	height: 50%;
+	float: left;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+}
+.grid-item:hover {
+	cursor: pointer;
+}
+/* grid home settings */
+#grid-home{
+	background: url(images/bg.jpg) center center;
+	cursor: default;
+}
+#grid-home:hover{
+	opacity: 1;
+}
+#grid-home h2 {
+	color: white;
+}
+#grid-home p {
+	color: white;
+	font-size: 14px;
+}
+/* grid home easter egg styles */
+#grid-home .easter-egg{
+	opacity: 1;
+	max-height: 20px;
+	transition: ease .3s all;
+}
+
+/* grid portfolio/about styles */
+#grid-portfolio, #grid-about{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bd8eed+0,b9a6db+100 */
+	background: #bd8eed; /* Old browsers */
+	background: -moz-linear-gradient(top, #bd8eed 0%, #b9a6db 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #bd8eed 0%,#b9a6db 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #bd8eed 0%,#b9a6db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd8eed', endColorstr='#b9a6db',GradientType=0 ); /* IE6-9 */
+}
+/* grid contact styles */
+#grid-contact{
+	background: #C5C6C2;
+}
+/* lower sections */
+section {
+	position: absolute;
+	bottom: auto;
+	padding: 0 30px;
+	box-sizing: border-box;
+	width: 100%;
+	max-height: 0;
+	background: white;
+	transition: ease all 1.5s;
+}
+/* Slide section in and out */
+section.active{
+	max-height: 800px;
+	height: auto;
+	bottom: 0;
+	transition: ease all 1.5s;
+}
+
+section.inactive{
+	max-height: 0px;
+	height: auto;
+	bottom: 0;
+	transition: ease all 1.5s;
+}
+section.inactive.grid-portfolio{
+	max-height: 800px;
+	margin-top: 0
+	height: auto;
+	bottom: auto;
+	transition: ease all 1.5s;
+}
+section.grid-portfolio {
+	max-height: 800px;
+	z-index: 10;
+}
+
+
+/* general section styles */
+section h1{
+	padding-top: 30px;
+}
+section p:last-of-type {
+	padding-bottom: 100px;
+}
+/* styles for close button */
+.close {
+	position: absolute;
+	padding: 20px;
+	top: 5%;
+	right: 5%;
+	font-size: 40px;
+	font-family: sans-serif;
+	cursor: pointer;
+}
+.close:hover {
+
+}
+/* styles for portfolio section */
+.portfolio-item-container {
+	width: 33%;
+	display: inline-block;
+	font-family: sans-serif;
+}
